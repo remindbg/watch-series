@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!-- OrcasThemes Muvee Reviews - Video Magazine Bootstrap HTML5 template Framework 1.0
-   &copy; Copyright 2017 - Design and Sitebuild
-   Web - www.orcaslabs.com
-   Envato Author - http://themeforest.net/user/orcasthemes -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -25,6 +21,10 @@
     <link rel="stylesheet" href="{{asset('css/ie.css')}}" type="text/css" media="screen, projection">
     <![endif]-->
     <link href="{{asset('css/lity.css')}}" rel="stylesheet">
+    <style>
+
+
+    </style>
 </head>
 <body>
 <!-- HOME 1 -->

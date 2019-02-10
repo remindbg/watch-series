@@ -17,10 +17,12 @@ class CreateSeasonsTable extends Migration
             // TODO : I def need to  rework that monster that im gonna create right now -.-
             $table->increments('id');
             $table->text('description')->nullable();
-            $table->timestamps();
-            $table->unsignedInteger('number');
+            $table->string('title');
+            // TODO: the number column is dumb as fuck, hope i can fix that later on, for now its useless and im not gonna use it
+            $table->unsignedInteger('number')->nullable();
             $table->unsignedInteger('series_id')->nullable();
             $table->unsignedInteger('iscurrent')->nullable();
+            $table->timestamps();
 
         });
     }

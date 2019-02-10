@@ -62,11 +62,11 @@
                                             <div class="item">
                                                 <div class="row auto-clear">
                                                     <article class="col-lg-3 col-md-3 col-sm-6 post post-medium">
-                                                        <div class="thumbr">
+                                                        <div class="thumbr img-wrapper">
                                                             <a class="post-thumb" href="https://www.youtube.com/watch?v=Ikkfwnq4Uss" data-lity="">
                                                                 <span class="play-btn-border" title="Play"><i class="fa fa-play-circle headline-round" aria-hidden="true"></i></span>
                                                                 <div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
-                                                                <img class="img-responsive" src="img/thumbs/thumb-s.jpg" alt="#">
+                                                                <img class="img-responsive" src="img/nakafe.jpg" alt="#">
                                                             </a>
                                                         </div>
                                                         <div class="infor">
@@ -88,7 +88,7 @@
                                                             <a class="post-thumb" href="https://www.youtube.com/watch?v=Ikkfwnq4Uss" data-lity="">
                                                                 <span class="play-btn-border" title="Play"><i class="fa fa-play-circle headline-round" aria-hidden="true"></i></span>
                                                                 <div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
-                                                                <img class="img-responsive" src="img/thumbs/thumb-s2.jpg" alt="#">
+                                                                <img class="img-responsive" src="img/got.jpg" alt="#">
                                                             </a>
                                                         </div>
                                                         <div class="infor">

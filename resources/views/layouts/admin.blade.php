@@ -181,25 +181,27 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-10">
+
+                            @if (\Session::has('message'))
+                                <div class="sufee-alert alert with-close alert-info alert-dismissible fade show">
+                                    <span class="badge badge-pill badge-info">Info</span>
+                                   {{\Session::get('message')}}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                            @endif
+
                            @yield('content')
                         </div>
 
-
-
-
-
-
-
-
-
-
-                            <!-- /# card -->
-                        </div>
-                        <!-- END RIGHT BLOCK -->
                     </div>
+
+                </div>
+
                 </div>
             </div>
         </div>
-    </div>
+
     <!-- END PAGE CONTAINER-->
 @include('admin.static.footer')

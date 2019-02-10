@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Series;
 class SeasonsController extends Controller
 {
     /**
@@ -12,9 +12,10 @@ class SeasonsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index( )
     {
-        //
+
+        
     }
 
     /**

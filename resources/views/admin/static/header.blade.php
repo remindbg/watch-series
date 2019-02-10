@@ -56,10 +56,10 @@
                             <i class="fas fa-tachometer-alt"></i>Series</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="index.html">All Series</a>
+                                <a href="{{route('series.index')}}">All Series</a>
                             </li>
                             <li>
-                                <a href="index2.html">New Series</a>
+                                <a href="{{route('series.create')}}">New Series</a>
                             </li>
                         </ul>
                     </li>

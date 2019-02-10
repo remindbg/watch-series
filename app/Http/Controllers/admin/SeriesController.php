@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Series;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,9 +13,11 @@ class SeriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Series $series)
     {
-        return 1;
+        $allseries = Series::all();
+        return view('admin.series.index',compact('allseries'));
+
     }
 
     /**
@@ -24,7 +27,8 @@ class SeriesController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('admin.series.create');
     }
 
     /**
@@ -35,7 +39,9 @@ class SeriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $series = new Series($request->all());
+        $series->save();
+        return redirect()->route('series.index')->with('message','added new series');
     }
 
     /**
@@ -57,7 +63,9 @@ class SeriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $series = Series::find($id);
+
+        return view('admin.series.edit',compact('series'));
     }
 
     /**
@@ -69,7 +77,14 @@ class SeriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $series = Series::find($id);
+        $series->title = $request['title'];
+        $series->slug = $request['slug'];
+        $series->description = $request['description'];
+        $series->isactive = $request['isactive'];
+        $series->image = $request['image'];
+        $series->save();
+        return redirect()->route('series.index')->with('message','edited!');
     }
 
     /**
@@ -80,6 +95,9 @@ class SeriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $serie = Series::find($id);
+        $serie->delete($serie);
+        return redirect()->route('series.index')->with('message','Removed!');
+
     }
 }
