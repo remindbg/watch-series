@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f610320a-30a0-4186-abd4-489404fbbaf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/seasons/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/seasons/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SeriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SeriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Season.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Season.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Series.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Series.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_10_130739_create_seasons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_10_130739_create_seasons_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/episodes/index.blade - Copy.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/seasons/single.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/series/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/series/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/series/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/series/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/series/index.blade - Copy.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/series/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/static/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/static/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/static/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/static/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/seasons/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/seasons/single.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/series/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/series/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +25,40 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+              <folding>
+                <element signature="e#46#61#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/seasons/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_10_130739_create_seasons_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="20" column="129" selection-start-line="20" selection-start-column="129" selection-end-line="20" selection-end-column="129" />
+            <state relative-caret-position="336">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -62,8 +88,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/EpisodesController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SeasonController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/CommentsController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Series.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/series/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/series/edit.blade.php" />
@@ -71,10 +95,15 @@
         <option value="$PROJECT_DIR$/resources/views/admin/static/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/static/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/seasons/single.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/series/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/seasons/single.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_10_130739_create_seasons_table.php" />
+        <option value="$PROJECT_DIR$/app/Series.php" />
+        <option value="$PROJECT_DIR$/app/Season.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/seasons/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/seasons/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -226,17 +255,6 @@
             <path>
               <item name="watch-series" type="b2602c69:ProjectViewProjectNode" />
               <item name="watch-series" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="watch-series" type="b2602c69:ProjectViewProjectNode" />
-              <item name="watch-series" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="watch-series" type="b2602c69:ProjectViewProjectNode" />
-              <item name="watch-series" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,7 +276,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="episodes" type="462c0819:PsiDirectoryNode" />
+              <item name="seasons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="watch-series" type="b2602c69:ProjectViewProjectNode" />
@@ -274,6 +292,11 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="watch-series" type="b2602c69:ProjectViewProjectNode" />
+              <item name="watch-series" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,16 +342,15 @@
       <workItem from="1549646166997" duration="4800000" />
       <workItem from="1549796350803" duration="10634000" />
       <workItem from="1549814212693" duration="5472000" />
-      <workItem from="1549829144765" duration="983000" />
+      <workItem from="1549829144765" duration="7347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21889000" />
+    <option name="totallyTimeSpent" value="28253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -483,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SeriesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -539,16 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Season.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Series.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -570,16 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SeriesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -596,31 +591,72 @@
     <entry file="file://$PROJECT_DIR$/resources/views/series/index.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/series/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/seasons/single.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/series/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="252">
+          <caret line="12" column="29" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/series/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/seasons/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Series.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Season.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_10_130739_create_seasons_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="20" column="129" selection-start-line="20" selection-start-column="129" selection-end-line="20" selection-end-column="129" />
+        <state relative-caret-position="336">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/seasons/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SeasonsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <element signature="e#46#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

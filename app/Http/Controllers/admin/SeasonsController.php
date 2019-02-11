@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Season;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Series;
@@ -12,10 +13,10 @@ class SeasonsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index( )
+    public function index($id)
     {
-
-        
+      $series = Series::all()->find($id);
+        return view('admin.seasons.index',compact('series'));
     }
 
     /**
@@ -23,9 +24,12 @@ class SeasonsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $serie = Series::find($id);
+
+
+        return view('admin.seasons.create',compact('serie'));
     }
 
     /**
@@ -34,9 +38,14 @@ class SeasonsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
+        $season = new Season();
+        $season->title = $request['title'];
+        $season->number = $request['number'];
+        $season->series_id = $id;
+        $season->save();
+        return redirect()->route('season.index',$id)->with('message','Added new Season');
     }
 
     /**
