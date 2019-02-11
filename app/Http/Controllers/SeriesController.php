@@ -8,13 +8,16 @@ use Illuminate\Http\Request;
 class SeriesController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display Latest Series
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function latest()
     {
-        //
+        $series = Series::with('seasons')->get();
+
+        return view('series.latest',compact('series'));
+
     }
 
     /**

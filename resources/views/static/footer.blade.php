@@ -1,12 +1,10 @@
+</div>
 <div id="footer" class="container-fluid footer-background">
     <div class="container">
         <footer>
             <!-- SECTION FOOTER -->
             <div class="row copyright-bottom text-center">
                 <div class="col-md-12 text-center">
-                    <a href="http://themeforest.net/user/orcasthemes/portfolio?ref=orcasthemes" class="footer-logo" title="Video Magazine Bootstrap HTML5 template">
-                        <img src="img/footer-logo.png" class="img-responsive text-center" alt="Video Magazine Bootstrap HTML5 template">
-                    </a>
                     <p>&copy; Copyright 2019. All Rights Reserved. watch-series.info</p>
                 </div>
             </div>

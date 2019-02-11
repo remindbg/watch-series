@@ -6,7 +6,7 @@
     <meta name="description" content="Muvee Reviews - Video Magazine Bootstrap HTML5 template Framework 1.0">
     <meta name="author" content="OrcasThemes">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" type="image/png" href="" />
     <title>Watch Free Series and TV Shows - no ads</title>
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
@@ -21,30 +21,16 @@
     <link rel="stylesheet" href="{{asset('css/ie.css')}}" type="text/css" media="screen, projection">
     <![endif]-->
     <link href="{{asset('css/lity.css')}}" rel="stylesheet">
-    <style>
-
-
-    </style>
+   @yield('css')
 </head>
 <body>
-<!-- HOME 1 -->
 <div id="home1" class="container-fluid standard-bg">
-    <!-- HEADER -->
     <div class="row header-top">
         <div class="col-lg-3 col-md-6 col-sm-5 col-xs-8">
-            <a class="main-logo" href="#"><img src="img/main-logo.png" class="main-logo img-responsive" alt="Muvee Reviews" title="Muvee Reviews"></a>
+            <a class="main-logo" href="#"><img src="" class="main-logo img-responsive" alt="watch-series.info" title="watch-series.info"></a>
         </div>
 
-        <div class="col-lg-3 col-md-6 col-sm-7 hidden-xs pull-right">
-            <div class="right-box">
-                @guest()
-                    <button type="button" class="access-btn" data-toggle="modal" data-target="#enquirypopup">Register</button>
-                @elseguest()
-                    <button type="button" class="access-btn" data-toggle="modal" data-target="#enquirypopup">Profile</button>
-                @endguest
 
-            </div>
-        </div>
     </div>
     <!-- MENU -->
     <div class="row home-mega-menu ">
@@ -70,19 +56,10 @@
                                 <li><a href="single-post-fullwidth.html">Latest Episodes</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown mega-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TV Shows <span class="fa fa-chevron-down pull-right"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="single-video.html">Latest TV Shows</a></li>
-                                <li><a href="single-video-fullwidth.html">Popular</a></li>
-                                <li><a href="single-video-right-sidebar.html">All (a-z) TV Shows</a></li>
-                                <li><a href="single-post-fullwidth.html">Latest Episodes</a></li>
-                            </ul>
-                        </li>
-
                         <li><a href="/latest">All Latest</a></li>
+                        <li><a href="/popular">All Popular</a></li>
+                        <li><a href="/episodes/all">Episodes Feed</a></li>
                         <li><a href="/contact">Contact</a></li>
-
                     </ul>
                     <div class="search-block">
                         <form>

@@ -14,10 +14,8 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/latest','SeriesController@latest');
 
-Route::get('/admin2', function () {
-    return view('admin.homeadmin');
-});
 /*
  * admin routes
  */
@@ -34,3 +32,6 @@ Route::get('/admin2/series/{id}/create','admin\SeasonsController@create')->name(
 Route::post('/admin2/series/{id}','admin\SeasonsController@store')->name('season.store');
 Route::get('/admin2/seasons/{id}/edit','admin\SeasonsController@create')->name('season.edit');
 Route::post('/admin2/series/{id}/destroy','admin\SeasonsController@destroy')->name('season.destroy');
+Route::get('/admin2', function () {
+    return view('admin.homeadmin');
+});
