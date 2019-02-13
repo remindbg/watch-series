@@ -15,6 +15,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/latest','SeriesController@latest');
+Route::get('/series/{id}/{slug}/','SeriesController@single');
 
 /*
  * admin routes

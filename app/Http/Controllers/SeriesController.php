@@ -7,82 +7,26 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
-    /**
-     * Display Latest Series
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
+    public function single($id) {
+        $serie = Series::with('seasons')->find($id);
+        $serie->views +=1;
+        $serie->save();
+
+        return view('series.single',compact('serie'));
+
+    }
     public function latest()
     {
         $series = Series::with('seasons')->get();
 
         return view('series.latest',compact('series'));
-
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function  popular() {
+        $series = Series::with('seasons')->orderBy('views')->get();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Series  $series
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Series $series)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Series  $series
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Series $series)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Series  $series
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Series $series)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Series  $series
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Series $series)
-    {
-        //
-    }
 }

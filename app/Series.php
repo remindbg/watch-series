@@ -11,4 +11,17 @@ class Series extends Model
     public function seasons() {
         return $this->hasMany('App\Season');
     }
+
+
+
+
+    public function scopePopular() {
+        return $this->with('seasons')->orderBy('views')->limit(10)->get();
+
+    }
+
+    public function scopeLatest() {
+        return $this->with('seasons')->orderBy('created_at')->get();
+
+    }
 }

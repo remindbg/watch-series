@@ -14,7 +14,10 @@ class SeriesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Series $series)
+
     {
+        $test = Series::popular();
+        dd($test);
         $allseries = Series::all();
         return view('admin.series.index',compact('allseries'));
 
