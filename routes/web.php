@@ -15,12 +15,18 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/latest','SeriesController@latest');
-Route::get('/series/{id}/{slug}/','SeriesController@single');
+Route::get('/series/{id}/{slug}/','SeriesController@single')->name('fseries.single');
 
+Route::get('/series/{series_id}/{season_id}/{slug}/season/{season_num}/','SeasonController@single')->name('fseason.single');
 
-Route::get('/series/{id}/{slug}/season/{season_num}','SeasonController@single')->name('fseason.all');
-Route::get('/series/{id}/{slug}/season/{season_num}/episode/{episode_num}','EpisodeController@single')->name('fepisode.all');
+Route::get('/series/{series_id}/{season_id}/{slug}/season/{season_num}/{episode_id}/episode/{episode_number}/'
+    ,'EpisodeController@single')->name('fepisode.single');
 
+Route::get('/test2', function () {
+    return view('layouts.new');
+});
+
+Route::get('/theme/{theme}', 'ThemeController@pickTheme')->name('themepicker');
 
 
 
@@ -43,7 +49,7 @@ Route::get('/series/{id}/{slug}/season/{season_num}/episode/{episode_num}','Epis
  */
 Route::get('/admin2', function () {
     return view('admin.homeadmin');
-});
+})->middleware('auth');
 Route::resources([
     'admin2/series'     => 'admin\SeriesController',
     'admin2/episodes'   => 'admin\EpisodesController',

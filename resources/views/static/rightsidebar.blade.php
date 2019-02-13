@@ -1,37 +1,27 @@
-<div class="col-lg-3 hidden-md col-sm-12 text-center top-sidebar">
-    <!-- SUBSCRIBE BOX -->
-    <div class="subscribe-box">
-        <h2 class="icon"><i class="fa fa-plug" aria-hidden="true"></i>Login</h2>
-        <!-- SUBSCRIBE FIELD -->
-        <form name="search-submit" method="post" action="#" id="subscribe-submit">
-            <fieldset class="search-fieldset">
-                <input id="subscribe" type="text" name="search" size="12" class="search-field" placeholder="Your email address" value="">
-                <input id="subscribe" type="password" name="search" size="12" class="search-field" placeholder="Your email address" value="">
-                <input type="checkbox" class="checkbox-inline pull-left"> Remember
-                <button class="subscribe-btn" type="submit" title="Login">Login</button>
-                <hr>
-                <button class="btn btn-sm btn-info" type="submit" title="Register">Register</button>
-            </fieldset>
-        </form>
-    </div>
+<aside class="dark-bg">
 
-    <aside class="sidebar">
-            <h2 class="icon"><i class="fa fa-upload" aria-hidden="true"></i> Episodes</h2>
+    <article>
+        <h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>Latest Series</h2>
+        <ul class="sidebar-links">
+            <li class="fa fa-television"><a href="/">Lifestyle</a><span>links: 235</span></li>
 
-            <div class="text-left small">
-                <a href="/series">Game Of Thrones</a> -
-                <span class="small">
-                                        Season 7
-                                    </span>
-                |
-                <span class="small">
-                                        Season 7
-                                    </span>
-                <p class="small text-right">20 minutes ago</p>
-                <hr>
-            </div>
+        </ul>
+    </article>
+    <div class="clearfix spacer"></div>
+    <article>
+        <h2 class="icon"><i class="fa fa-tag" aria-hidden="true"></i>tags</h2>
+        <ul class="footer-tags">
+            <li><a href="#">videos</a></li>
+            <li><a href="#">premium</a></li>
+            <li><a href="#">hair</a></li>
+            <li><a href="#">beauty</a></li>
+            <li><a href="#">ranking</a></li>
+            <li><a href="#">lifestyle</a></li>
+            <li><a href="#">sport</a></li>
+            <li><a href="#">money</a></li>
+            <li><a href="#">comments</a></li>
+        </ul>
+    </article>
 
-        <div class="clearfix spacer"></div>
-    </aside>
-
-</div>
+    <div class="clearfix spacer"></div>
+</aside>

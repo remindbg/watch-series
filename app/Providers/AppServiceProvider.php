@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Providers;
-
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use App\Series;
@@ -23,7 +21,6 @@ class AppServiceProvider extends ServiceProvider
             $view->with('latests',$latests);
         });
     }
-
     /**
      * Bootstrap any application services.
      *

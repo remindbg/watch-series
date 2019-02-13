@@ -7,11 +7,14 @@
     <meta name="author" content="OrcasThemes">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="icon" type="image/png" href="" />
-    <title>Watch Free Series and TV Shows - no ads</title>
+    <title>@yield('title')</title>
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{asset('css/screen.css')}}">
+    <link rel="stylesheet" href="
+            @if(Cookie::get('theme'))
+        {{asset('css/'. Cookie::get('theme'))}}@else{{asset('css/orange.css')}}
+            @endif">
     <link rel="stylesheet" href="{{asset('css/animation.css')}}">
     <!--[if IE 7]>
     <link rel="stylesheet" href="{{asset('css/fontello-ie7.css')}}">
@@ -50,15 +53,23 @@
                         <li class="dropdown mega-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TV Series <span class="fa fa-chevron-down pull-right"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="single-video.html">Latest Series</a></li>
-                                <li><a href="single-video-fullwidth.html">Popular</a></li>
-                                <li><a href="single-video-right-sidebar.html">All (a-z) Series</a></li>
-                                <li><a href="single-post-fullwidth.html">Latest Episodes</a></li>
+                                <li><a href="/latest">Latest </a></li>
+                                <li><a href="/popular">Popular</a></li>
+                                <li><a href="/series">All (a-z) Series</a></li>
+                                <li><a href="/episodes-feed">Latest Episodes</a></li>
                             </ul>
                         </li>
-                        <li><a href="/latest">All Latest</a></li>
-                        <li><a href="/popular">All Popular</a></li>
-                        <li><a href="/episodes/all">Episodes Feed</a></li>
+
+                        <li><a href="/links-feed">Links Feed</a></li>
+                        <li class="dropdown mega-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Change Theme <span class="fa fa-chevron-down pull-right"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{route('themepicker','orange')}}">Orange</a></li>
+                                <li><a href="{{route('themepicker','pink')}}">Pink</a></li>
+                                <li><a href="{{route('themepicker','blue')}}">Blue</a></li>
+                                <li><a href="{{route('themepicker','aqua')}}">Aqua</a></li>
+                            </ul>
+                        </li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                     <div class="search-block">

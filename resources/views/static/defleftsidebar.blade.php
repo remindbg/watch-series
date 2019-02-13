@@ -8,8 +8,7 @@
             <p>Trending Series</p>
             <ul class="sidebar-links small">
                 @foreach ($populars as $series)
-                    <li class="fa fa-television"><a href="/series/{{$series->id}}/{{$series->slug}}">{{$series->title}}</a><span>
-                            <i class="fa fa-eye"></i>{{$series->views}} views</span></li>
+                    <li class="fa fa-television"><a href="/series/{{$series->id}}/{{$series->slug}}">{{$series->title}}</a></li>
                 @endforeach
             </ul>
         </article>
