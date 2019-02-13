@@ -15,11 +15,11 @@ class CreateEpisodesTable extends Migration
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title');
             $table->integer('number')->nullable();
-            $table->string('altseason')->nullable();
             $table->unsignedInteger('season_id')->nullable();
             $table->unsignedInteger('series_id')->nullable();
+            $table->foreign('season_id')->references('id')->on('seasons')->onDelete('cascade');
             $table->timestamps();
         });
     }

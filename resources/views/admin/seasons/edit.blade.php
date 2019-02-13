@@ -2,20 +2,20 @@
 
 @section('content')
     <div class="card">
-        <form action="{{route('episode.update',$episode->id)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <form action="{{route('season.update',$season->id)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
             @csrf
             @method('post')
             <div class="card-header">
-                <strong>Add new Episode  to : <a href="{{route('season.edit',$episode->season->id)}}">{{$episode->season->title}}</a></strong>
+                <strong>Create new Season  to : <a href="{{route('series.edit',$season->series->id)}}">{{$season->series->title}}</a></strong>
             </div>
             <div class="card-body card-block">
 
                 <div class="row form-group">
                     <div class="col col-md-3">
-                        <label for="title" class=" form-control-label">Episode Title</label>
+                        <label for="title" class=" form-control-label">Season Title</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="title" name="title" value="{{$episode->title}}" placeholder="Text" class="form-control">
+                        <input type="text" id="title" name="title" value="{{$season->title}}" placeholder="Text" class="form-control">
                         <small class="form-text text-muted">Title</small>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                         <label for="number" class=" form-control-label">Season Number</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="number" id="number" name="number" value="{{$episode->number}}" placeholder="" class="form-control">
+                        <input type="number" id="number" name="number" value="{{$season->number}}" placeholder="" class="form-control">
                         <small class="form-text text-muted">Number[1-x]</small>
                     </div>
                 </div>

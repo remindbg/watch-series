@@ -23,6 +23,9 @@ class CreateLinksTable extends Migration
             $table->unsignedInteger('likes')->default(1);
             $table->unsignedInteger('dislikes')->default(0);
             $table->unsignedInteger('isbroken')->default(0);
+
+            $table->unsignedInteger('episode_id')->nullable();
+            $table->foreign('episode_id')->references('id')->on('episodes')->onDelete('cascade');
             $table->timestamps();
         });
     }

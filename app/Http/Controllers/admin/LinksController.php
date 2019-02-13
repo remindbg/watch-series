@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Episode;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Link;
 class LinksController extends Controller
 {
     /**
@@ -12,9 +13,12 @@ class LinksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $episode = Episode::with('links')->find($id);
+
+        return view('admin.links.index',compact('episode'));
+
     }
 
     /**
@@ -22,9 +26,10 @@ class LinksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $episode = Episode::find($id);
+        return view('admin.links.create',compact('episode'));
     }
 
     /**
@@ -33,9 +38,15 @@ class LinksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
+        $link = new Link();
+        $link->url = $request['url'];
+        $link->domain = $request['domain'];
+        $link->isactive = $request['isactive'];
+        $link->episode_id = $id;
+        $link->save();
+        return redirect()->route('link.index',$id)->with('message','link added');
     }
 
     /**
@@ -57,7 +68,8 @@ class LinksController extends Controller
      */
     public function edit($id)
     {
-        //
+        $link = Link::with('episode')->find($id);
+        return view('admin.links.edit',compact('link'));
     }
 
     /**
@@ -69,7 +81,13 @@ class LinksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $link = Link::find($id);
+        $link->url = $request['url'];
+        $link->domain = $request['domain'];
+        $link->isactive = $request['isactive'];
+        $link->save();
+        return redirect()->route('link.index',$link->episode_id)->with('message','link updated');
+
     }
 
     /**
@@ -80,6 +98,8 @@ class LinksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $link = Link::find($id);
+        Link::destroy($id);
+        return redirect()->route('link.index',$link->episode_id)->with('message','Link Removed');
     }
 }

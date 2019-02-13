@@ -17,10 +17,33 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/latest','SeriesController@latest');
 Route::get('/series/{id}/{slug}/','SeriesController@single');
 
+
+Route::get('/series/{id}/{slug}/season/{season_num}','SeasonController@single')->name('fseason.all');
+Route::get('/series/{id}/{slug}/season/{season_num}/episode/{episode_num}','EpisodeController@single')->name('fepisode.all');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * admin routes
  */
-
+Route::get('/admin2', function () {
+    return view('admin.homeadmin');
+});
 Route::resources([
     'admin2/series'     => 'admin\SeriesController',
     'admin2/episodes'   => 'admin\EpisodesController',
@@ -28,11 +51,35 @@ Route::resources([
     'admin2/comments'   => 'admin\CommentsController'
 ]);
 
+/**
+ * seasons admin routes todo: resource controllers
+ */
+
 Route::get('/admin2/series/{id}/seasons','admin\SeasonsController@index')->name('season.index');
 Route::get('/admin2/series/{id}/create','admin\SeasonsController@create')->name('season.create');
-Route::post('/admin2/series/{id}','admin\SeasonsController@store')->name('season.store');
-Route::get('/admin2/seasons/{id}/edit','admin\SeasonsController@create')->name('season.edit');
-Route::post('/admin2/series/{id}/destroy','admin\SeasonsController@destroy')->name('season.destroy');
-Route::get('/admin2', function () {
-    return view('admin.homeadmin');
-});
+Route::post('/admin2/series/{id}/seasons','admin\SeasonsController@store')->name('season.store');
+Route::post('/admin2/season/{id}','admin\SeasonsController@update')->name('season.update');
+Route::get('/admin2/seasons/{id}/edit','admin\SeasonsController@edit')->name('season.edit');
+Route::post('/admin2/seasons/{id}/destroy','admin\SeasonsController@destroy')->name('season.destroy');
+
+/*
+ * episodes routes
+ */
+Route::get('/admin2/seasons/{id}/episodes','admin\EpisodesController@index')->name('episode.index');
+Route::get('/admin2/episodes/{id}/create','admin\EpisodesController@create')->name('episode.create');
+Route::post('/admin2/episodes/{id}/seasons','admin\EpisodesController@store')->name('episode.store');
+Route::post('/admin2/episodes/{id}','admin\EpisodesController@update')->name('episode.update');
+Route::get('/admin2/episodes/{id}/edit','admin\EpisodesController@edit')->name('episode.edit');
+Route::post('/admin2/episodes/{id}/destroy','admin\EpisodesController@destroy')->name('episode.destroy');
+
+
+/*
+ * admin links routes
+ */
+
+Route::get('/admin2/episodes/{id}/links','admin\LinksController@index')->name('link.index');
+Route::get('/admin2/links/{id}/create','admin\LinksController@create')->name('link.create');
+Route::post('/admin2/links/{id}/episodes','admin\LinksController@store')->name('link.store');
+Route::post('/admin2/links/{id}','admin\LinksController@update')->name('link.update');
+Route::get('/admin2/links/{id}/edit','admin\LinksController@edit')->name('link.edit');
+Route::post('/admin2/links/{id}/destroy','admin\LinksController@destroy')->name('link.destroy');

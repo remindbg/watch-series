@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Episode extends Model
 {
-    //
+
+    public function season() {
+        return $this->belongsTo('App\Season');
+    }
+
+    public function links() {
+        return $this->hasMany('App\Link');
+    }
 }

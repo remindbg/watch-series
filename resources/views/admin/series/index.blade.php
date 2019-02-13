@@ -28,9 +28,9 @@
                     <td>
                         <form  action="{{route('series.destroy',$serie->id)}}" method="POST">
                             @csrf
-                            @method('destroy')
+                            @method('delete')
                             <button type="submit" class="btn btn-sm btn-danger"
-                               onclick="confirm('Yes?')">Delete</button>
+                               onclick="return confirm('Yes?')">Delete</button>
                         </form>
                     </td>
                 </tr>

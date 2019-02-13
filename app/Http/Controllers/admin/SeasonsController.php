@@ -26,10 +26,10 @@ class SeasonsController extends Controller
      */
     public function create($id)
     {
-        $serie = Series::find($id);
+        $series = Series::find($id);
 
 
-        return view('admin.seasons.create',compact('serie'));
+        return view('admin.seasons.create',compact('series'));
     }
 
     /**
@@ -67,7 +67,8 @@ class SeasonsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $season = Season::find($id);
+        return view('admin.seasons.edit',compact('season'));
     }
 
     /**
@@ -79,7 +80,12 @@ class SeasonsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $season = Season::find($id);
+        $season->title = $request['title'];
+        $season->number = $request['number'];
+        $season->save();
+        return redirect()->route('season.index',$season->series_id)->with('message','Edited!');
+
     }
 
     /**
@@ -90,6 +96,8 @@ class SeasonsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $season = Season::find($id);
+       Season::destroy($id);
+        return redirect()->route('season.index',$season->series_id)->with('message','deleted!');
     }
 }

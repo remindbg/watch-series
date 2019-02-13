@@ -16,9 +16,7 @@ class SeriesController extends Controller
     public function index(Series $series)
 
     {
-        $test = Series::popular();
-        dd($test);
-        $allseries = Series::all();
+        $allseries = Series::all()->sortByDesc('created_at');
         return view('admin.series.index',compact('allseries'));
 
     }

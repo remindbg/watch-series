@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Episode;
+use App\Season;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,9 +14,13 @@ class EpisodesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $season = Season::with('episodes')->find($id);
+
+
+
+        return view('admin.episodes.index',compact('season'));
     }
 
     /**
@@ -22,9 +28,11 @@ class EpisodesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $season = Season::find($id);
+
+        return view('admin.episodes.create',compact('season'));
     }
 
     /**
@@ -33,9 +41,16 @@ class EpisodesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $episode = new Episode();
+        $episode->title = $request['title'];
+        $episode->number = $request['number'];
+        $episode->season_id = $id;
+        $series_id = Season::find($id);
+        $episode->series_id = $series_id->series->id;
+        $episode->save();
+        return redirect()->route('episode.index',$id)->with('message','Added New Episdoe');
     }
 
     /**
@@ -57,7 +72,8 @@ class EpisodesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $episode = Episode::find($id);
+        return view('admin.episodes.edit',compact('episode'));
     }
 
     /**
@@ -69,7 +85,12 @@ class EpisodesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $episode = Episode::find($id);
+        $episode->title = $request['title'];
+        $episode->number = $request['number'];
+        $episode->save();
+        return redirect()->route('episode.index',$id)->with('message','Edited!');
+
     }
 
     /**
@@ -80,6 +101,8 @@ class EpisodesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $episode = Episode::find($id);
+        Episode::destroy($id);
+        return redirect()->route('episode.index',$episode->season_id)->with('message','deleted!');
     }
 }
