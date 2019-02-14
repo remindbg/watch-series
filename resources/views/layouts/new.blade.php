@@ -30,7 +30,7 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <div class="row auto-clear">
-
+                            {{--TODO random series--}}
                             </div>
                         </div>
 
