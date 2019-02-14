@@ -1,12 +1,8 @@
 <?php
-
 namespace App\Providers;
-
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
-use App\Article;
-use App\Category;
-use App\Comment;
+use App\Series;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -17,18 +13,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        view()->composer(['_partials.header','_partials.sidebar'], function ($view) {
-
-            $latestarticles = Article::orderBy('created_at','desc')->get();
-            $cats = Category::all();
-            $populararticles = Article::get()->sortByDesc('views');
-            $comments = Comment::with('articles')->latest()->get();
-
-            $view->with(compact('latestarticles','cats','populararticles','comments'));
-
+        View::composer('static.rightsidebar', function ($view) {
+            $latests = Series::all();
+            $view->with('latests',$latests);
         });
-    }
+        View::composer('layouts.new', function ($view) {
+            $randoms = Series::inRandomOrder();
+            $view->with('randoms',$randoms);
+        });
 
+    }
     /**
      * Register any application services.
      *
