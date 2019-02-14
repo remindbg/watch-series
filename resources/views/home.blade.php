@@ -30,10 +30,7 @@
                 </article>
             @endforeach
 
-
-
         </div>
-
 
 </div>
 @endsection

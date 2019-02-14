@@ -30,7 +30,7 @@
 <div id="home1" class="container-fluid standard-bg">
     <div class="row header-top">
         <div class="col-lg-3 col-md-6 col-sm-5 col-xs-8">
-            <a class="main-logo" href="#"><img src="" class="main-logo img-responsive" alt="watch-series.info" title="watch-series.info"></a>
+            <a class="main-logo" href="#"></a>
         </div>
 
 
@@ -54,13 +54,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TV Series <span class="fa fa-chevron-down pull-right"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/latest">Latest </a></li>
-                                <li><a href="/popular">Popular</a></li>
                                 <li><a href="/series">All (a-z) Series</a></li>
-                                <li><a href="/episodes-feed">Latest Episodes</a></li>
                             </ul>
                         </li>
-
-                        <li><a href="/links-feed">Links Feed</a></li>
                         <li class="dropdown mega-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Change Theme <span class="fa fa-chevron-down pull-right"></span></a>
                             <ul class="dropdown-menu">

@@ -12,13 +12,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        View::composer('static.defleftsidebar', function ($view) {
-            $populars = Series::popular();
-            $view->with('populars',$populars);
-        });
+
         View::composer('static.rightsidebar', function ($view) {
-            $latests = Series::latest();
+            $latests = Series::all();
             $view->with('latests',$latests);
+        });
+        View::composer('layouts.new', function ($view) {
+            $randoms = Series::inRandomOrder();
+            $view->with('randoms',$randoms);
         });
     }
     /**
